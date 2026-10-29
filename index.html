@@ -196,14 +196,25 @@
             },
             {
                 id: 'doubao',
-                name: '豆包 (执行官 / Executor)',
+                name: '豆包 (创意官 / Creative)',
                 avatar: '🍞',
                 active: true,
                 provider: 'volcengine',
                 model: 'doubao-lite-4k',
                 apiKey: '',
                 baseUrl: 'https://ark.cn-beijing.volces.com/api/v3/chat/completions',
-                systemPrompt: '你是豆包，注重细节、高效执行的实用主义 AI。你可以使用中文或英文参与讨论。/ You are Doubao, a details-oriented pragmatic executor.'
+                systemPrompt: '你是豆包，善于提供创新视角与新点子，思维发散、敢于提出不同方案的 AI。你可以使用中文或英文参与讨论。/ You are Doubao, a creative AI that offers fresh perspectives and bold ideas.'
+            },
+            {
+                id: 'muse',
+                name: 'Muse (执行官 / Executor)',
+                avatar: '⚙️',
+                active: true,
+                provider: 'openai',
+                model: '',
+                apiKey: '',
+                baseUrl: '',
+                systemPrompt: '你是 Muse，注重执行、跟进、核对与落地，善于把讨论变成可执行步骤并推动完成。你可以使用中文或英文参与讨论。/ You are Muse, an execution-focused AI that turns discussion into actionable steps and follows through.'
             }
         ];
 
@@ -294,14 +305,14 @@
         function addNewMember() {
             members.push({
                 id: 'custom_' + Date.now(),
-                name: 'Muse (创意官 / Creative)',
-                avatar: '🎨',
+                name: 'Muse (执行官 / Executor)',
+                avatar: '⚙️',
                 active: true,
                 provider: 'openai',
                 model: 'gpt-3.5-turbo',
                 apiKey: '',
                 baseUrl: 'https://api.openai.com/v1/chat/completions',
-                systemPrompt: '你是 Muse 创意官，善于提供创新视角。你可以使用中文或英文参与讨论。/ You are Muse, a creative mindset officer.'
+                systemPrompt: '你是 Muse 执行官，注重执行、跟进、核对与落地。你可以使用中文或英文参与讨论。/ You are Muse, an execution-focused officer.'
             });
             renderMembers();
         }
